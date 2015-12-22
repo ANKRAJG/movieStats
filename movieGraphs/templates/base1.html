@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ an }} Stats</title>
+        <meta charset = "utf-8" />
+        
+        <link rel = "stylesheet" href = "/static/css/styles.css" type = "text/css" />
+        <meta name = "viewport" content = "width-device-width, initial-scale = 1.0" />
+    </head>
+    
+    <body class = "body">
+        <header class = "mainHead">
+            <div class = "image"><img src = "/static/img/djang.jpg" width = "700" height = "220" /></div>
+        
+            <nav>
+                <ul>
+                    <li><a href = "/film/">Home</a></li>
+                    <li><a href = "/film/">Movie</a></li>
+                    <li><a href = "#">News</a></li>
+                    <li><a href = "{% url 'detail' %}">Sample Graph</a></li> 
+                </ul>
+            </nav> 
+            
+            
+            
+        <div>
+            <div class = "imaging">
+                    <img src = "{{ ai.url }}" width = "222" height = "304" />
+            </div>
+        
+        
+            <div class = "details">
+                <div class = "artistName">
+                        <b style="font-size: 35px; font-family: 'sans-serif'; color: #000;">{{ an }} </b><em>({{ ap }})</em>
+                </div>
+                
+                <div class = "movieImage">
+                    <img src = "{{ mi.url }}" width = "135" height = "180" />
+                </div>
+                
+                <div class = "movieDetails">
+                        {% if yaxis == 'Rating' %}
+                        <p><b style="font-size: 25px; font-family: 'sans-serif'; color: #000;">&nbsp;&nbsp;&nbsp;{{ muvie }} ({{ ry }})</b></p>
+                        {% elif yaxis == 'Release' %}
+                        <p><b style="font-size: 25px; font-family: 'sans-serif'; color: #000;">&nbsp;&nbsp;&nbsp;{{ muvie }} ({{ ry }})</b></p>
+                        {% elif yaxis == 'Budget' %}
+                        <p><b style="font-size: 25px; font-family: 'sans-serif'; color: #000;">&nbsp;&nbsp;&nbsp;{{ muvie }} ({{ ry }})</b></p>
+                        {% else %}
+                        <p><b style="font-size: 25px; font-family: 'sans-serif'; color: #000;">&nbsp;&nbsp;&nbsp;{{ muvie }} ({{ ry }})</b></p>
+                        {% endif %}
+                            
+                    
+                    <span class="stars" style="margin-left: 20px; float:left; line-height: 0px;">{{ ratings }}</span><p style="font-size: 15px; color: #555; line-height:20px">&nbsp;&nbsp;&nbsp;Rating<b>: </b> {{ rat }}/10</p>
+                    
+                    {% if yaxis == 'Rating' %}
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ an }}'s most rated Movie</p>
+                    {% elif yaxis == 'Release' %}
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ an }}'s most recent Movie</p>
+                    {% elif yaxis == 'Budget' %}
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ an }}'s most budgeted Movie</p>
+                    {% else %}
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ an }}'s highest grossing Movie</p>
+                    {% endif %}
+                    
+                    <p style="font-size: 15px; color: #555;">&nbsp;&nbsp;&nbsp;&nbsp;Director<b>: </b> <em>{{ director }}</em></p>
+                    
+                    <p style="font-size: 15px; color: #555;">&nbsp;&nbsp;&nbsp;&nbsp;Starring<b>: </b> <em>{{ actor }}</em></p>
+                    <p style="font-size: 15px; color: #555;">&nbsp;&nbsp;&nbsp;&nbsp;Releasing Year<b>: </b> <em>{{ ry }}</em></p>
+                    
+                    <p style="font-size: 15px; color: #555;">&nbsp;&nbsp;&nbsp;&nbsp;Budget<b>: </b> <em>${{ bujet }} million</em> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Box-Office<b>: </b> <em>${{ boxOffice }} million</em></p>
+                    
+                </div>
+            </div>
+        </div>
+            
+        </header> 
+
+
+
+        
+        {% block content %}
+                    
+
+        {% endblock %}
+    
+        <aside class = "sideInfo">
+            <h1 style = "font-family: 'sans-serif';">X-axis Vaules</h1>
+                {% for x in list %}
+            <b><p>{{ x.0 }} :</b> {{ x.1 }}</a></p>    
+                {% endfor %}
+        </aside>
+        
+        <footer class = "mainFooter">
+            <p>Copyright &copy; 2015</p>
+        </footer>
+        
+    </body>
+    
+    
+       
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script >
+
+            $.fn.stars = function() {
+                return $(this).each(function() {
+                    // Get the value
+                    var val = parseFloat($(this).html());
+                    // Make sure that the value is in 0 - 5 range, multiply to get width
+                    var size = Math.max(0, (Math.min(5, val))) * 16;
+                    // Create stars holder
+                    var $span = $('<span />').width(size);
+                    // Replace the numerical value with stars
+                    $(this).html($span);
+                });
+            }
+        
+            
+            $(function() {
+                $('span.stars').stars();
+            });
+            
+            
+        </script>
+    
+    
+</html>
+        

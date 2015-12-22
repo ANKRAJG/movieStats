@@ -1,0 +1,214 @@
+body{
+    color: #000305;
+    font-size: 80%;
+    font-family: "Lucida Sans Unicode";
+    line-height: 1.5;
+    text-align: left;
+}
+
+a{
+    text-decoloration: none;
+}
+
+a:link, a:visited{
+    color: #1a94d6;
+}
+
+a:hover, a:active{
+    color: #797979;
+}
+
+
+/* Classes */
+
+.body{  
+    margin: 0 auto; 
+    width: 75%;
+    clear: both;
+}
+
+.image{
+    margin-left: 17%;
+}
+
+.mainHead nav{
+    background-color: #797979;
+    height: 50px;
+    border-radius: 7px;
+}
+
+.mainHead nav ul{
+    list-style: none;
+    margin: 0 auto;
+}
+
+.mainHead nav ul li{
+    float: left;
+    display: inline;
+}
+
+.mainHead nav a:link, .mainHead nav a:visited{
+    color: #FFF;
+    display: inline-block;
+    padding: 15px 25px;
+    height: 20px;
+} 
+
+.mainHead nav .active a:link,
+.mainHead nav .active a:visited,
+.mainHead nav a:hover,
+.mainHead nav a:active{
+    background-color: #04bae3;
+    text-shadow: none;
+}
+
+
+
+
+.imaging{
+    width: 22%;
+    float:left;
+    margin: 1% 0% 1% 0%;
+    border-radius: 7px;
+    padding-left: 0%;
+    /* background-color: #ffff96; */
+    background-color: darkseagreen;
+    color: black;
+    height: 304px;
+}
+
+
+
+
+.details{
+    width: 72%;
+    float: right;
+    padding: 1% 2% 0% 3%;
+    background-color: #eee; 
+    /*background-color: #ffff96; */
+    margin: 1% 0% 1% 0%;
+    border-radius: 7px;
+    height: 294px;
+}
+
+
+.artistName{
+    padding: 1% 0% 2% 0%;
+    font-size: 25px;
+    color: #888;
+    /*background-color: white; */
+}
+
+.movieImage{
+    /*margin: 0% 0% 0% 0%;*/
+    /* background-color: white; */
+    margin: 1% 0% 0% 0%;
+    padding-top: 4px;
+    float:left;
+    width: 135px;
+    height: 171;
+}
+
+.movieDetails{
+    /*background-color: white; */
+    font-size: 15px; 
+    color: #555;
+    line-height: 10px;
+    margin: 0% 0% 0% 20%;
+    height: 152px;
+    
+}
+
+
+span.stars, span.stars span {
+    display: block;
+    background: url(../img/stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+
+
+
+.sideInfo{
+    width: 19%;
+    float:left;
+    margin: 0% 0% 1% 0%;
+    border-radius: 7px;
+    padding-left: 2%;
+    padding-right: 1%;
+    padding-top: 1%;
+    background-color: #eee;
+    color: black;
+}
+
+
+
+.mainContent{
+    line-height: 20px;
+    border-radius: 7px;
+}
+
+
+.content1{
+    width: 78%;
+    padding: 3% 3% 2% 17%;
+    background-color: #ffff96; 
+    margin: 1% 0% 1% 1%;
+    border-radius: 7px;
+}
+
+
+
+.content{
+    width: 72%;
+    float: right;
+    padding: 1% 3% 1% 2%;
+    background-color: #eee; 
+    margin: 0% 0% 1% 1%;
+    border-radius: 7px;
+}
+
+
+
+
+.form{
+    font-size: 15px;
+    width: 94%;
+    padding: 2% 2%;
+    /* background-color: #f8f8f8; */
+    background-color: #ffff96;
+    margin: 1% 1% 1% 1%;
+    
+}
+
+
+
+
+#id_profession, #id_artist, #id_x_axis, #id_y_axis{
+    width: 70%;
+    font-size: 14px;
+}
+
+
+.mainFooter{
+    width: 100%;
+    float: left;
+    margin-bottom: 2%;
+    border-radius: 7px;
+    background-color: #797979;
+}
+
+.mainFooter p{
+    width: 90%;
+    margin: 2% auto;
+    color: white;
+}
+
+
+
+
+

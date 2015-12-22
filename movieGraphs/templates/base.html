@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie Stats</title>
+        <meta charset = "utf-8" />
+        
+        <link rel = "stylesheet" href = "/static/css/styles.css" type = "text/css" />
+        <meta name = "viewport" content = "width-device-width, initial-scale = 1.0" />
+    </head>
+    
+    <body class = "body">
+            
+        <header class = "mainHead">
+            <div class = "image"><img src = "/static/img/djang.jpg" width = "700" height = "220" /></div>
+        
+            <nav>
+                <ul>
+                    <li><a href = "/film/">Home</a></li>
+                    <li><a href = "/film/">Movie</a></li>
+                    <li><a href = "#">News</a></li>
+                    <li><a href = "{% url 'detail' %}">Sample Graph</a></li>   <!--  <a href = "/film/graph/">Graphs</a>  -->
+                </ul>
+            </nav> 
+        </header>
+        
+        {% block content %}
+            
+        {% endblock %}
+        
+        <footer class = "mainFooter">
+            <p>Copyright &copy; 2015</p>
+        </footer>
+    </body>
+    
+</html>
+        
