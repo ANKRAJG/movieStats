@@ -21,6 +21,7 @@ import PIL.Image
 import io 
 
 
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -54,23 +55,23 @@ def film_graph(request):
                 labels = [r[1] for r in result]
                 actrs = [r[2] for r in result]
                 directrs = [r[3] for r in result]
-                relez = [r[5] for r in result]
-                ratin = [r[6] for r in result]
-                budzt = [r[7] for r in result]
-                boxoff = [r[8] for r in result]
+                relez = [r[4] for r in result]
+                ratin = [r[5] for r in result]
+                budzt = [r[6] for r in result]
+                boxoff = [r[7] for r in result]
                 
                 #if-else condition
                 if '' + yaxis + '' == 'Rating':
-                    yAxis = [r[6] for r in result]
-                    
-                elif '' + yaxis + '' == 'Release':
                     yAxis = [r[5] for r in result]
                     
+                elif '' + yaxis + '' == 'Release':
+                    yAxis = [r[4] for r in result]
+                    
                 elif '' + yaxis + '' == 'Budget':
-                    yAxis = [r[7] for r in result]
+                    yAxis = [r[6] for r in result]
                     
                 else:
-                    yAxis =[r[8] for r in result]
+                    yAxis =[r[7] for r in result]
             
                 max_y = max(yAxis)                          #Getting maximum value of Y-axis       
                 max_yIndex = yAxis.index(max_y)             #Getting index of maximum value
@@ -152,7 +153,8 @@ def film_graph(request):
                 
             
                 list = zip(xAxis, labels)
-                context = {'list': list, 'an': an, 'yaxis': yaxis, 'mi': mi, 'ai': ai, 'ap': ap, 'ag': ag, 'muvie': muvie, 'actor': actor, 'director': director, 'ry': ry, 'rat': rat, 'ratings': ratings, 'bujet': bujet, 'boxOffice': boxOffice}
+                context = {'list': list, 'an': an, 'yaxis': yaxis, 'mi': mi, 'ai': ai, 'ap': ap, 'ag': ag, 'muvie': muvie, 'actor': actor, \
+                           'director': director, 'ry': ry, 'rat': rat, 'ratings': ratings, 'bujet': bujet, 'boxOffice': boxOffice}
             
                 return render(request, 'graph.html', context)        
     
@@ -203,7 +205,7 @@ def sample_graph(request):
     for xa in xAxis:
         count+=1
 
-    ax1.set_xlabel('<--------------Movies-------------->')
+    ax1.set_xlabel('<-------------- Movies -------------->')
     ax1.set_xlim(-1, count)
 
     #if-else
@@ -212,11 +214,11 @@ def sample_graph(request):
         ax1.set_ylim(0.0, 5.5)
     
     elif '' + yaxis + '' == 'Budget':
-        ax1.set_ylabel('' + yaxis + ' (in $million)---->')
+        ax1.set_ylabel('' + yaxis + ' (in $million) ---->')
         ax1.set_ylim(0, 260)
 
     elif '' + yaxis + '' == 'Box_Office':
-        ax1.set_ylabel('' + yaxis + ' (in $million)---->')
+        ax1.set_ylabel('' + yaxis + ' (in $million) ---->')
         ax1.set_ylim(0, 1000)
     
     else:
