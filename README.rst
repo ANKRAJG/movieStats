@@ -11,7 +11,7 @@ There are four fields in the main home Film page to fill, Profession, Artist Nam
 options from the dropdown apart from Artist Name where you have to type the appropriate artist name.
 After submitting button, the data will be shown to you in a graphical form with X-axis and Y-axis
 values given by you.
-Right now the data in the database of this app is small, but to make this app do wonders there must be large dataset in it.
+Right now the data in the database of this app is small, but to make this app do well there must be large dataset in it.
      
 
 Detailed documentation is in the "docs" directory.
