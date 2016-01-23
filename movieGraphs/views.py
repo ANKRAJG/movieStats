@@ -172,7 +172,7 @@ def film_graph(request):
 
 def sample_graph(request):
     
-    profession = 'Actors'
+    profession = 'Actor'
     artist = 'Matthew McConaughey'
     xaxis = 'Movie'
     yaxis = 'Box_Office'
