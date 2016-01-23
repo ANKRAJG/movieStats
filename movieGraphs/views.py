@@ -1,4 +1,4 @@
-#import numpy as np
+import numpy as np
 
 from matplotlib.font_manager import FontProperties
 from matplotlib import pyplot as plt
