@@ -19,7 +19,7 @@ Detailed documentation is in the "docs" directory.
 
 Heroku Link
 -----------
-https://moviestats.herokuapp.com
+You can check this app by visiting: https://moviestats.herokuapp.com
 
 Quick start
 -----------
