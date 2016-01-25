@@ -11,7 +11,8 @@ from django.core.exceptions import MultipleObjectsReturned
 from django.core import serializers    
 from django.http import HttpResponse
 
-from movieStats.settings import MEDIA_ROOT, MEDIA_URL
+#from movieStats.settings import MEDIA_ROOT, MEDIA_URL
+from movieStats.settings import MEDIA_URL
 from movieGraphs.models import Hollywood,Profession, Artist, Xaxis, Yaxis, MovieImage, ArtistImage
 
 import sqlite3
