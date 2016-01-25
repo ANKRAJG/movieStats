@@ -3,9 +3,9 @@ from django.db import models
 
 class Hollywood(models.Model):
     movie = models.CharField(max_length = 140)
-    actors = models.TextField()
-    directors = models.CharField(max_length = 140)
-    producers = models.TextField()
+    actor = models.TextField()
+    director = models.CharField(max_length = 140)
+    producer = models.TextField()
     release = models.IntegerField()
     rating = models.FloatField()
     budget = models.IntegerField()
