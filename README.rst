@@ -16,6 +16,11 @@ Right now the data in the database of this app is small, but to make this app do
 
 Detailed documentation is in the "docs" directory.
 
+
+Heroku Link
+-----------
+https://moviestats.herokuapp.com
+
 Quick start
 -----------
 
