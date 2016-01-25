@@ -1,1 +1,1 @@
-https://thawing-ravine-57886.herokuapp.com/
+https://moviestats.herokuapp.com/
